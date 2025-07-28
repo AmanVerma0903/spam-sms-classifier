@@ -6,11 +6,8 @@ from nltk.stem.porter import PorterStemmer
 import nltk
 import os
 
-# Add local nltk_data path before anything else
-nltk.data.path.append('./nltk_data')
-
-# Optional: You can remove this in production
-nltk.download('punkt')  # only runs if not found in nltk_data
+import nltk
+nltk.data.path.append("./nltk_data") 
 
 ps = PorterStemmer()
 
