@@ -2,10 +2,18 @@ import streamlit as st
 import pickle
 import string
 from nltk.corpus import stopwords
-import nltk
 from nltk.stem.porter import PorterStemmer
-nltk.download('punkt')
+import nltk
+import os
+
+# Add local nltk_data path before anything else
+nltk.data.path.append('./nltk_data')
+
+# Optional: You can remove this in production
+nltk.download('punkt')  # only runs if not found in nltk_data
+
 ps = PorterStemmer()
+
 
 # Function to transform input text
 def transform_text(text):
